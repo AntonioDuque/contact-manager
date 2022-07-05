@@ -1,4 +1,3 @@
-
 # contact-manager-testing-project
 
 ## java.runtime.version=18
