@@ -5,13 +5,13 @@
 
 ### Complete project with Junit 5
 
-> ####  Java classes
+> ###  Java classes
 >> **Contact** -> Atributtes | Constructor | Getters | validations-Methods
 >> **ContactManager** -> Map | ContactManager-Methods
 
 
-> #### Java testing-classes
-> **ContactManangerTest** -> testing->Methods
+> ### Java testing-classes
+>> **ContactManangerTest** -> testing->Methods
 
 1. @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 2. @BeforeEach -> setup
