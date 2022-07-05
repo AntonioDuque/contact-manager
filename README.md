@@ -1,19 +1,17 @@
 # contact-manager-testing-project
 
 ## java.runtime.version=18
-## junit-jupiter ->     5.8.2  -> version of the programmer-friendly testing framework for Java and the JVM
+## junit-jupiter -> 5.8.2 -> version of the programmer-friendly testing framework for Java and the JVM
 
-#### Complete project with Junit 5
+### Complete project with Junit 5
 
->######  Java classes
-
+> ####  Java classes
 >> **Contact** -> Atributtes | Constructor | Getters | validations-Methods
 >> **ContactManager** -> Map | ContactManager-Methods
 
 
->##### Java testing-classes
-
->> **ContactManangerTest** -> testing->Methods
+> #### Java testing-classes
+> **ContactManangerTest** -> testing->Methods
 
 1. @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 2. @BeforeEach -> setup
