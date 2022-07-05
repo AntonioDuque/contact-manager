@@ -12,7 +12,7 @@
 
 
 > ### Java testing-classes
->> **ContactManangerTest** -> testing->Methods
+>> **ContactManangerTest** -> testing-Methods
 
 ## Annotations
 
