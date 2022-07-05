@@ -7,6 +7,7 @@
 
 > ###  Java classes
 >> **Contact** -> Atributtes | Constructor | Getters | validations-Methods
+> 
 >> **ContactManager** -> Map | ContactManager-Methods
 
 
