@@ -12,8 +12,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.List;
 import java.util.Properties;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ContactManagerTest {
@@ -38,7 +37,7 @@ public class ContactManagerTest {
         assertFalse(contactManager.getAllContacts().isEmpty());
         assertEquals(1, contactManager.getAllContacts().size());
 
-        Assertions.assertTrue(contactManager.getAllContacts().stream()
+        assertTrue(contactManager.getAllContacts().stream()
                 .anyMatch(contact -> contact.getFirstName().equals("Antonio") &&
                         contact.getLastName().equals("Duque") &&
                         contact.getPhoneNumber().equals("0693958019")));
@@ -48,25 +47,19 @@ public class ContactManagerTest {
     @Test
     @DisplayName("Should Not Create Contact When First Name is Null")
     public void shouldThrowRunTimeExceptionWhenFirstNameIsNull() {
-        Assertions.assertThrows(RuntimeException.class, () -> {
-            contactManager.addContact(null, "Duque", "0693958019");
-        });
+
+        assertThrows(RuntimeException.class, () -> contactManager.addContact(null, "Duque", "0693958019"));
     }
 
     @Test
     @DisplayName("Should Not Create Contact When Last Name is Null")
     public void shouldThrowRunTimeExceptionWhenLastNameIsNull() {
-        Assertions.assertThrows(RuntimeException.class, () -> {
-            contactManager.addContact("Antonio", null, "0693958019");
-        });
+       assertThrows(RuntimeException.class, () -> contactManager.addContact("Antonio", null, "0693958019"));
     }
 
     @Test
     @DisplayName("Should Not Create Contact When Phone Number is Null")
-    public void shouldThrowRunTimeExceptionWhenPhoneNumberIsNull() {
-        Assertions.assertThrows(RuntimeException.class, () -> {
-            contactManager.addContact("Antonio", "Duque", null);
-        });
+    public void shouldThrowRunTimeExceptionWhenPhoneNumberIsNull() {assertThrows(RuntimeException.class, () -> contactManager.addContact("Antonio", "Duque", null));
     }
 
     @AfterEach
@@ -88,7 +81,7 @@ public class ContactManagerTest {
         assertFalse(contactManager.getAllContacts().isEmpty());
         assertEquals(1, contactManager.getAllContacts().size());
 
-        Assertions.assertTrue(contactManager.getAllContacts().stream()
+        assertTrue(contactManager.getAllContacts().stream()
                 .anyMatch(contact -> contact.getFirstName().equals("Antonio") &&
                         contact.getLastName().equals("Duque") &&
                         contact.getPhoneNumber().equals("0693958019")));
@@ -103,7 +96,7 @@ public class ContactManagerTest {
         assertFalse(contactManager.getAllContacts().isEmpty());
         assertEquals(1, contactManager.getAllContacts().size());
 
-        Assertions.assertTrue(contactManager.getAllContacts().stream()
+        assertTrue(contactManager.getAllContacts().stream()
                 .anyMatch(contact -> contact.getFirstName().equals("Antonio") &&
                         contact.getLastName().equals("Duque") &&
                         contact.getPhoneNumber().equals("0693958019")));
